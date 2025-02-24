@@ -61,7 +61,6 @@ a {
     width: 100%;
     background: linear-gradient(139deg, #eaf4fc 0%, #97caed 80.61%);
     height: 550px;
-    z-index: -1;
     position: relative;
     overflow: hidden;
 }
@@ -204,7 +203,7 @@ section#service h2 {
     background: #0167cb;
     color: #fff;
     border: 0;
-
+    
     font-family: "Figtree", sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -221,6 +220,19 @@ section#service h2 {
     font-weight: 600;
     font-size: 18px;
 }
+
+.btnprimary_two:hover {
+    
+    background: #00468b;
+    
+}
+.btnhelpnow:hover {
+    
+    background: rgb(129, 172, 44);
+
+}
+
+
 
 .ndis_specialist {
     background: linear-gradient(143deg, #e7f3fc 0%, #9bccee 87.12%);
@@ -316,7 +328,7 @@ section#service h2 {
 }
 
 .assistance {
-    padding: 20px 15px !important;
+    padding: 20px 15px;
 }
 
 .assistance h4 {
@@ -397,12 +409,6 @@ form label {
     color: #fff;
     background: #0167cb;
 }
-
-.summitbtn:hover {
-    border: 1px solid #0167cb;
-    color: #0167cb;
-}
-
 
 input[type="text"],
 input[type="email"],
@@ -554,11 +560,6 @@ a.playbtn {
     color: #0167cb;
 }
 
-
-.potential_box:hover {
-    background: #ecf6ff;
-}
-
 #got_question {
     padding: 60px 0;
     background: linear-gradient(139deg, #eaf4fc 0%, #97caed 80.61%);
@@ -649,47 +650,6 @@ a.playbtn {
     border-right: 0;
 }
 
-.important-msg {
-    background-color: #004e9a;
-}
-
-.important-msg .accordion {
-    /* --bs-accordion-border-color: red; */
-}
-
-.important-msg .accordion-button,
-.important-msg p {
-    color: white;
-    text-align: center;
-}
-
-.important-msg p {
-    color: white;
-    text-align: left;
-}
-
-.important-msg .accordion-button::after {
-    background-image: url(./img//icon/dropdown.svg)
-}
-
-.important-msg .accordion-button {
-    display: flex;
-    justify-content: center !important;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-}
-
-.important-msg .accordion-button::after {
-    background-image: url(./img/icon/dropdown.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 16px;
-    height: 16px;
-}
-
-
-
 #banner .buttons {
     display: flex;
     flex-direction: row;
@@ -736,7 +696,7 @@ a.playbtn {
         font-size: 24px;
         text-align: center;
         color: #0167cb;
-        margin: 0 0 62px;
+        margin-bottom: 2rem;
     }
 
 
@@ -777,6 +737,7 @@ a.playbtn {
         font-size: 14px;
     }
 
+
     .topHeader,
     nav .btnprimary,
     #banner .ndis-logo {
@@ -787,6 +748,7 @@ a.playbtn {
     #banner {
         padding-top: 8rem;
         height: 700px;
+
     }
 
     #banner h2 {
@@ -973,22 +935,6 @@ a.playbtn {
         padding-left: 0;
     }
 
-    .important-msg button {
-        font-size: 10px;
-    }
-
-    .important-msg h6 {
-        font-size: 13px;
-    }
-
-    .important-msg li {
-        font-size: 13px;
-    }
-
-    .important-msg .accordion-body {
-        padding: 1rem 0;
-    }
-
     .footer p {
         text-align: center;
 
@@ -1054,4 +1000,13 @@ a.playbtn {
         margin: 0 3rem;
         text-align: center;
     }
+
+                .service_box p,
+                .expert_box p,
+                #trusted_family p {
+                    font-family: "Figtree", sans-serif;
+                    font-weight: 300;
+                    font-size: 13px;
+                    color: #5c5c5c;
+                }
 }
