@@ -85,6 +85,12 @@ a {
 
 .bannerbox p {
     margin: 10px;
+    font-size: 19px;
+}
+
+#banner .banner-points p {
+    font-weight: 100;
+    opacity: 0.9;
 }
 
 .leftimg {
@@ -171,6 +177,7 @@ section#service h2 {
     border: 0.20px solid #8a8a8a33;
     border-radius: 2px;
     padding: 16px;
+    height: 300px;
 }
 
 .service_box:hover {
@@ -184,12 +191,13 @@ section#service h2 {
     font-size: 24px;
     color: #1d1f1e;
     line-height: 2;
+    padding-top: 0.5rem;
 }
 
 .service_box p {
     font-family: "Figtree", sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 171%;
     letter-spacing: 0em;
     color: #5c5c5c;
@@ -203,7 +211,7 @@ section#service h2 {
     background: #0167cb;
     color: #fff;
     border: 0;
-    
+
     font-family: "Figtree", sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -222,12 +230,13 @@ section#service h2 {
 }
 
 .btnprimary_two:hover {
-    
+
     background: #00468b;
-    
+
 }
+
 .btnhelpnow:hover {
-    
+
     background: rgb(129, 172, 44);
 
 }
@@ -239,21 +248,19 @@ section#service h2 {
     padding: 60px 0;
 }
 
+.ndis_specialist .text-center {
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #5c5c5c;
+}
+
 .ndis_specialist h2 {
     font-family: "Montserrat", serif;
     font-weight: 600;
     font-size: 32px;
     line-height: 150%;
     color: #0167cb;
-    text-align: center;
-}
-
-.ndis_specialist p {
-    font-family: "Montserrat", serif;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 150%;
-    color: #000;
     text-align: center;
 }
 
@@ -385,9 +392,9 @@ section#service h2 {
 }
 
 .expert_box p {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 150%;
     color: #000;
 }
@@ -448,75 +455,121 @@ input[type="checkbox"] {
     color: #0167cb;
 }
 
-#trusted_family p {
-
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 150%;
-    text-align: center;
-    color: #000;
-}
-
 
 #trusted_participants {
-    margin-top: 50px;
+    margin: 40px 0;
 }
 
-.slider_videos {
+.slider {
+    display: flex;
+}
+
+.slide {
+    flex: 0 0 50%;
+    padding: 10px;
+}
+
+.video-card {
     position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.slider_videos .info {
-    border-radius: 8px;
-    padding: 16px;
-    background: #fff;
+.video-card img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-a.playbtn {
+.youtube-icon {
     position: absolute;
-    background: url(/img/Playbutton.svg);
-    width: 50px;
-    left: 25%;
-    padding: 25px;
-    top: 42%;
-    transform: translate(50%, -100%);
-    z-index: 9;
-}
-
-.slider_videos img {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    border-radius: 16px;
-}
-
-.slider_videos .info {
-    border-radius: 8px;
-    padding: 16px;
-    background: #fff;
-    position: absolute;
-    width: 70%;
-    bottom: -26px;
-    left: 40%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.8;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: transform 0.3s ease, background 0.3s;
 }
 
-.slider_videos .info h4 {
-    font-family: "Montserrat", serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0em;
-    color: #1d1f1e;
+.video-card:hover .youtube-icon {
+    background: red;
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
-.slider_videos .info .span {
-    font-family: "Montserrat", serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 143%;
-    letter-spacing: 0em;
-    color: #646a69;
+.info {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 90%;
+    color: #000;
+    background: white;
+    text-align: left;
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slick-prev {
+    left: -50px;
+}
+
+.slick-next {
+    right: -50px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background: #81ac2c;
+    color: white;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 1;
+    color: black;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    color: white;
+}
+
+.slick-prev:before {
+    content: "\f104";
+}
+
+.slick-next:before {
+    content: "\f105";
 }
 
 #potential {
@@ -554,7 +607,7 @@ a.playbtn {
 .potential_box h3 {
     font-family: "Montserrat", serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1;
     letter-spacing: -0.01em;
     color: #0167cb;
@@ -609,6 +662,7 @@ a.playbtn {
 
 .accordion-item {
     color: #333;
+    border: 2px solid rgba(1, 103, 203, 0.1);
     background-color: transparent;
 
 }
@@ -662,7 +716,8 @@ a.playbtn {
     text-align: justify;
 }
 
-.grid-box, .menu-bar{
+.grid-box,
+.menu-bar {
     display: none;
 }
 
@@ -672,25 +727,38 @@ a.playbtn {
     border-radius: 0.7rem;
 }
 
-.quick-contact a, 
+.quick-contact a,
 .quick-contact h6 {
     color: #0167cb;
 
 }
 
-.quick-contact p{
+.quick-contact p {
     color: gray;
+}
+
+.ndis-logo-md {
+    display: none;
+}
+
+.service_box p,
+.expert_box p,
+#trusted_family p,
+#got_question .question_heading p,
+#startyourndis p {
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #5c5c5c;
 }
 
 @media(max-width: 576px) {
 
-#trusted_participants{
-    height: 30rem;
-}
-.menu-bar{
-    display: block;
-    padding: 0 1rem;
-}
+    .menu-bar {
+        display: block;
+        padding: 0 1rem;
+    }
+
     section#service h2 {
 
         font-size: 24px;
@@ -699,16 +767,13 @@ a.playbtn {
         margin-bottom: 2rem;
     }
 
-
-
-
     .service_box {
         /* background: #fafafa; */
         background: #f2faff;
         border: 0.20px solid #8a8a8a33;
         border-radius: 2px;
         padding: 16px;
-        height: 260px;
+        height: 310px;
     }
 
     .service_box h3 {
@@ -740,10 +805,26 @@ a.playbtn {
 
     .topHeader,
     nav .btnprimary,
-    #banner .ndis-logo {
+    .ndis-logo {
         display: none;
     }
 
+    .ndis-logo-md {
+        display: flex;
+        align-self: center;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    .banner-text div {
+        text-align: center;
+    }
+
+    .banner-text .text-start {
+        margin: 0 3rem;
+    }
 
     #banner {
         padding-top: 8rem;
@@ -771,14 +852,6 @@ a.playbtn {
         width: 80%;
     }
 
-    #banner .bannerbox p {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    #banner .bannerbox .row p {
-        font-size: 17px;
-    }
 
     .leftimg::after {
         left: -50px;
@@ -788,13 +861,13 @@ a.playbtn {
 
     .leftimg::before {
         left: -100px;
-        top: 380px;
+        top: 400px;
         width: 230%;
     }
 
     .rightimg::after {
-        left: 250px;
-        top: -600px;
+        left: 200px;
+        top: -620px;
         width: 220%;
     }
 
@@ -867,7 +940,7 @@ a.playbtn {
     }
 
     #expert_guidance p {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     #expert_guidance .expert_box {
@@ -887,14 +960,29 @@ a.playbtn {
         font-size: 9px;
     }
 
+    #expert_guidance .expert-filler-text {
+        display: none;
+    }
+
+    #trusted_family,
+    #got_question,
+    #expert_guidance,
+    #potential {
+        padding: 40px 0;
+    }
+
     #trusted_family h2 {
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 5px;
+    }
+
+    #trusted_participants {
+        margin-top: 20px;
     }
 
     #trusted_family p,
     #got_question .question_heading p {
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
     }
 
@@ -902,11 +990,16 @@ a.playbtn {
         margin: 0 15px;
     }
 
+    .button.slick-next.slick-arrow:hover {
+        background: #000;
+    }
+
     #potential h2,
     #got_question h2 {
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
     }
+
 
     #potential .buttons,
     #startyourndis .buttons {
@@ -921,19 +1014,17 @@ a.playbtn {
         font-size: 1rem;
         line-height: 150%;
         margin: 0.3rem 0;
-        
+
     }
 
     .potential_box {
         margin: 0.2rem 0;
     }
+
     .potential_box p {
         font-size: 0.8rem;
     }
 
-    #got_question #accordionExample button {
-        padding-left: 0;
-    }
 
     .footer p {
         text-align: center;
@@ -962,19 +1053,19 @@ a.playbtn {
         text-align: justify;
     }
 
-        .quick-contact {
-            background-color: transparent;
-        }
-    
-        .quick-contact a,
-        .quick-contact h6 {
-            color: white;
-    
-        }
-    
-        .quick-contact p {
-            color: white;
-        }
+    .quick-contact {
+        background-color: transparent;
+    }
+
+    .quick-contact a,
+    .quick-contact h6 {
+        color: white;
+
+    }
+
+    .quick-contact p {
+        color: white;
+    }
 
     .navbar-brand img {
         width: 200px;
@@ -996,17 +1087,112 @@ a.playbtn {
 
 
     #startyourndis p {
-        font-size: 12px;
+        font-size: 14px;
         margin: 0 3rem;
         text-align: center;
     }
 
-                .service_box p,
-                .expert_box p,
-                #trusted_family p {
-                    font-family: "Figtree", sans-serif;
-                    font-weight: 300;
-                    font-size: 13px;
-                    color: #5c5c5c;
-                }
+    .expert_box p,
+    #trusted_family p,
+    #got_question .question_heading p,
+    #startyourndis p {
+        font-family: "Montserrat", serif;
+        font-weight: 300;
+        font-size: 15px;
+        color: #5c5c5c;
+    }
+
+    .ndis_specialist .text-center {
+        font-size: 15px;
+    }
+
+    .flag-icon img {
+        width: 10rem;
+        margin-bottom: 1rem;
+    }
+
+    .small-md {
+
+        font-size: 14px;
+    }
+
+    .info h5 {
+
+        font-size: 10px;
+        margin: 0;
+    }
+
+    .info span {
+
+        font-size: 8px;
+    }
+
+    .info {
+        padding: 5px 5px;
+        border-radius: 5px;
+        bottom: 22%;
+    }
+
+    .slick-prev {
+        left: 20px;
+    }
+
+    .slick-next {
+        right: 20px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 15px;
+        height: 15px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 10px;
+    }
+
+    .slide {
+        padding: 0;
+    }
+
+    .youtube-icon {
+        width: 25px;
+        height: 25px;
+
+    }
+
+    .youtube-icon i {
+        font-size: 12px;
+    }
+
+    .accordion-body p {
+
+        font-size: 12px;
+    }
+
+    .accordion-body {
+
+        padding-left: 0.5rem;
+    }
+
+    .accordion-button {
+
+        font-size: 12px;
+        padding: 0.5rem 1rem;
+    }
+
+    .accordion-button::after {
+        width: calc(var(--bs-accordion-btn-icon-width) * 0.6);
+        height: calc(var(--bs-accordion-btn-icon-width) * 0.6);
+        background-size: calc(var(--bs-accordion-btn-icon-width) * 0.6);
+    }
+
+    .bannerbox p {
+        font-size: 16px;
+    }
+
+    #banner .banner-points p {
+        font-size: 14px;
+    }
 }
